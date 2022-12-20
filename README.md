@@ -3,13 +3,15 @@ Distributed Training of SRGAN with DP, DDP and lightning
 
 SRGAN is a generative adversarial network that can be used to enhance low res images. It outperforms conventional interpolation methods. With proper training, it can outperform SRCNNs and SRResNets.
 
-model.py - Generator model and Discriminator models
+model.py -- Generator model and Discriminator models
 
-train.py - train with single GPU or multi-GPUs using DataParallel
+train.py -- train with single GPU or multi-GPUs using DataParallel
 
-train_ddp.py - train with multi-GPUs using DistributedDataParallel, can use multiple nodes
+train_ddp.py -- train with multi-GPUs using DistributedDataParallel, can use multiple nodes
 
-ddp_lightning.py - train with multi-GPUs using PyTorch Lightning, can use multiple nodes
+ddp_lightning.py -- train with multi-GPUs using PyTorch Lightning, can use multiple nodes
+
+util.py -- Dataset wrapper, TVloss, VGG19 feature extractor
 
 ![XV3KZDk - Imgur](https://user-images.githubusercontent.com/35909212/208551671-382ec927-6202-4a8d-8dc8-f2960c96f521.gif)
 
