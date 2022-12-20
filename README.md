@@ -74,5 +74,6 @@ python ddp_lightning.py --bs 128 --epochs 100 --device n
 ## To generate image and test for PSNR and SSIM:
 Run:
 ```bash
-python test_image.py --weight yourmodel.pth --image yourimage.jpg --cuda --downsample bicubic
+python test_image.py --weight yourmodel.pth --image yourimage.jpg --downsample bicubic --cuda
 ```
+--cuda tag is optional.
