@@ -13,15 +13,8 @@ ddp_lightning.py -- train with multi-GPUs using PyTorch Lightning, can use multi
 
 util.py -- Dataset wrapper, TVloss, VGG19 feature extractor
 
+
 ![XV3KZDk - Imgur](https://user-images.githubusercontent.com/35909212/208551671-382ec927-6202-4a8d-8dc8-f2960c96f521.gif)
-
-SR results:
-![WeChat Screenshot_20221219193016](https://user-images.githubusercontent.com/35909212/208553963-ab92e972-4772-44a2-887f-7b328ed4e8f7.png)
-![WeChat Screenshot_20221219193022](https://user-images.githubusercontent.com/35909212/208553968-83222333-6a1b-41a9-8ec2-b8e9349dbc78.png)
-![WeChat Screenshot_20221219193002](https://user-images.githubusercontent.com/35909212/208553984-4765235c-2673-4a20-b02e-4e584d48c5e1.png)
-![WeChat Screenshot_20221219193032](https://user-images.githubusercontent.com/35909212/208553986-25adc542-bada-4b1c-9c65-03e4d04a4540.png)
-![WeChat Screenshot_20221219193044](https://user-images.githubusercontent.com/35909212/208553988-6f2ce8af-73bd-493f-8110-f4eaf0b25981.png)
-
 
 ## Requirements
 1. numpy
@@ -38,6 +31,26 @@ pip install pytorch-lightning
 download DIV2K dataset here:([train](http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip)) ([valid](http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_valid_HR.zip))
 
 Unzip to ./data/DIV2K_train_HR and ./data/DIV2K_valid_HR
+
+## SR results:
+![cecilia result](https://user-images.githubusercontent.com/35909212/208555583-4c94cf9e-0a9c-4dfa-b3bc-7f339744698f.png)
+![waterfall result](https://user-images.githubusercontent.com/35909212/208555590-de0f8938-9c98-47e0-8ae0-d2ee97b89b36.png)
+![psnr and ssim](https://user-images.githubusercontent.com/35909212/208555605-210c8edc-d2f0-42a0-9ca6-71cd9d2f470f.png)
+![loss convergence](https://user-images.githubusercontent.com/35909212/208555597-de3ae586-311e-4344-86d6-6e05523d3707.png)
+![loss vs nGPUs](https://user-images.githubusercontent.com/35909212/208555599-83e18601-1194-4140-b5ff-c24429da3c82.png)
+![epoch total time](https://user-images.githubusercontent.com/35909212/208555635-d4c7ce14-fba1-48ac-802f-8973228fa7f5.png)
+![epoch training time](https://user-images.githubusercontent.com/35909212/208555646-dd552a78-c6ba-4898-b183-db040624592a.png)
+
+## Observations:
+1. SRGAN needs to be trained for more epochs (>10,000).
+2. Training devices should not affect loss convergence.
+3. PSNR and SSIM do not reflect perceived image quality, image quality is subjective.
+4. DDP is significantly faster than DP for single node multi-GPU training. It also allows training across multiple nodes.
+5. Pytorch Lightning offers even better scaling efficiency. Lightning w/ 2 GPUs is as fast as DDP w/ 4 GPUs.
+6. Scaling efficiency depends on optimization. Lightning is highly optimized for distributed training, also works well with SLURM.
+7. Performance difference between our DDP and Lightning may be partially caused by different communication backend. We used GLOO and Lightning uses NCCL which may be more suitable for the HPC clusters.
+
+
 
 ## DataParallel training
 When submitting job to SLURM, run the command:
