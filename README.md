@@ -15,7 +15,8 @@ pip install pytorch-lightning
 ```
 
 ## Before running
-download DIV2K dataset here:[train](http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip)[valid](http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_valid_HR.zip)
+download DIV2K dataset here:([train](http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip)) ([valid](http://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_valid_HR.zip))
+
 Unzip to ./data/DIV2K_train_HR and ./data/DIV2K_valid_HR
 
 ## DataParallel training
