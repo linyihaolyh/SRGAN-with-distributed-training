@@ -3,6 +3,14 @@ Distributed Training of SRGAN with DP, DDP and lightning
 
 ![XV3KZDk - Imgur](https://user-images.githubusercontent.com/35909212/208551671-382ec927-6202-4a8d-8dc8-f2960c96f521.gif)
 
+SR results:
+![WeChat Screenshot_20221219193016](https://user-images.githubusercontent.com/35909212/208553963-ab92e972-4772-44a2-887f-7b328ed4e8f7.png)
+![WeChat Screenshot_20221219193022](https://user-images.githubusercontent.com/35909212/208553968-83222333-6a1b-41a9-8ec2-b8e9349dbc78.png)
+![WeChat Screenshot_20221219193002](https://user-images.githubusercontent.com/35909212/208553984-4765235c-2673-4a20-b02e-4e584d48c5e1.png)
+![WeChat Screenshot_20221219193032](https://user-images.githubusercontent.com/35909212/208553986-25adc542-bada-4b1c-9c65-03e4d04a4540.png)
+![WeChat Screenshot_20221219193044](https://user-images.githubusercontent.com/35909212/208553988-6f2ce8af-73bd-493f-8110-f4eaf0b25981.png)
+
+
 ## Requirements
 1. numpy
 2. PyTorch
