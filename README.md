@@ -38,7 +38,7 @@ Unzip to ./data/DIV2K_train_HR and ./data/DIV2K_valid_HR
 ![psnr and ssim](https://user-images.githubusercontent.com/35909212/208555605-210c8edc-d2f0-42a0-9ca6-71cd9d2f470f.png)
 ![loss convergence](https://user-images.githubusercontent.com/35909212/208555597-de3ae586-311e-4344-86d6-6e05523d3707.png)
 ![loss vs nGPUs](https://user-images.githubusercontent.com/35909212/208555599-83e18601-1194-4140-b5ff-c24429da3c82.png)
-![epoch total time](https://user-images.githubusercontent.com/35909212/208555635-d4c7ce14-fba1-48ac-802f-8973228fa7f5.png)
+![epoch total time](https://user-images.githubusercontent.com/35909212/208645722-acd900f6-0be9-4479-beb0-594ff245d9cc.png)
 ![epoch training time](https://user-images.githubusercontent.com/35909212/208555646-dd552a78-c6ba-4898-b183-db040624592a.png)
 
 ## Observations:
