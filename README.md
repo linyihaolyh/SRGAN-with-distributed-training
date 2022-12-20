@@ -55,8 +55,9 @@ Unzip to ./data/DIV2K_train_HR and ./data/DIV2K_valid_HR
 ## DataParallel training
 When submitting job to SLURM, run the command:
 ```bash
-python train.py --upscale_factor 4 --cuda --epochs 100 --bs 128 --lr=0.0001 --dp --savetag nGPU128BS100epochDP 
+python train.py --upscale_factor 4 --cuda --epochs 100 --bs 128 --lr=0.0001 --dp --savetag nGPU128BS100epochDP --pretrain yourmodel.pth
 ```
+--pretrain tag is optional, use it to resume training on your model.
 
 ## DistributedDataParallel training
 When submitting job to SLURM, run the command:
