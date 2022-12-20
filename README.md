@@ -64,16 +64,18 @@ When submitting job to SLURM, run the command:
 ```bash
 python train_DDP.py --upscale_factor 4 --cuda --epochs 100 --bs 128 --lr=0.0001 --savetag nGPU128BS100epochDDP
 ```
+use srun when running with multiple nodes.
 
 ## Lightning training
 When submitting job to SLURM, run the command:
 ```bash
 python ddp_lightning.py --bs 128 --epochs 100 --device n
 ```
+use srun when running with multiple nodes.
 
 ## To generate image and test for PSNR and SSIM:
 Run:
 ```bash
 python test_image.py --weight yourmodel.pth --image yourimage.jpg --downsample bicubic --cuda
 ```
---cuda tag is optional.
+--cuda tag is optional. 
